@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 NAME HERE <png9981@gmail.com>
 */
 package cmd
 
@@ -48,6 +48,7 @@ to quickly create a Cobra application.`,
 		}
 
 		repositories.UpdateTask(id, statusValue)
+
 		fmt.Println("Update task successfully")
 	},
 }
@@ -56,14 +57,4 @@ func init() {
 	rootCmd.AddCommand(updateCmd)
 	updateCmd.Flags().StringVar(&status, "status", "", "Status of the task")
 	updateCmd.Flags().IntVar(&id, "id", 0, "")
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// updateCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// updateCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 NAME HERE <png9981@gmail.com>
 */
 package cmd
 
@@ -37,7 +37,7 @@ to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		tasks := repositories.GetListTodoTasks()
 		for _, task := range(tasks) {
-			fmt.Printf("Id: %d, Task: %s, status: %s, last updated at: %s\n", task.Id, task.Title, getTaskStatusText(task.Status), task.UpdatedAt.UTC())
+			fmt.Printf("Id: %d, Task: %s, status: %s, last updated at: %s\n", task.ID, task.Title, getTaskStatusText(task.Status), task.UpdatedAt.UTC())
 		}
 	},
 }

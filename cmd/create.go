@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 NAME HERE <png9981@gmail.com>
 */
 package cmd
 
@@ -24,10 +24,13 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		scanner := bufio.NewScanner(os.Stdin)
+
 		fmt.Print("Entering task: ")
 		scanner.Scan()
 		title := scanner.Text()
 		repositories.CreateTask(title)
+
+		fmt.Printf("Create task successfully.")
 	},
 }
 
